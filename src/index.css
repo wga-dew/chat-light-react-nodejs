@@ -47,10 +47,20 @@ input[type='text']:not(:last-child) {
   padding: 30px;
 }
 
+.chat-messages .chat-messages--view {
+  width: 100%;
+  height: auto;
+  overflow-x: auto;
+}
+
 .messages {
-  flex: 1;
-  height: calc(100% - 155px);
-  overflow: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.messages.my-mess > .message {
+  align-self: flex-end;
 }
 
 .message {
